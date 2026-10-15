@@ -63,6 +63,7 @@ endef
 all: build
 
 help:
+	@echo "Bitrig personal fork: bitrig-info, bitrig-preview, bitrig-build-ios, bitrig-build-mac, bitrig-provision, bitrig-test"
 	@echo "Build:"
 	@echo "  build                 Build the iOS and Mac Catalyst app"
 	@echo "  build-ios             Build the iOS app"
@@ -193,3 +194,25 @@ clean-build:
 
 clean: clean-build
 	rm -rf "$(DERIVED_DATA)"
+
+# Personal fork workflows use Bitrig's workspace build cache and deployment UI.
+.PHONY: bitrig-info bitrig-preview bitrig-build-ios bitrig-build-mac bitrig-provision bitrig-test
+
+bitrig-info:
+	bitrig build -list -json
+	bitrig run -list -json
+
+bitrig-preview:
+	bitrig preview -platform iOS -platform macOS -scheme FlowDown -configuration Debug
+
+bitrig-build-ios:
+	bitrig build -destination 'generic/platform=iOS' -scheme FlowDown -configuration Debug
+
+bitrig-build-mac:
+	bitrig build -destination 'generic/platform=macOS,variant=Mac Catalyst' -scheme FlowDown -configuration Debug
+
+bitrig-provision:
+	bitrig build -destination 'generic/platform=iOS' -scheme FlowDown -configuration Debug --provision
+
+bitrig-test:
+	bitrig test -scheme FlowDown -destination 'platform=iOS Simulator' -configuration Debug
