@@ -40,6 +40,26 @@ After identifiers change, run `make bitrig-provision` once so Apple registers th
 
 ## Verify iCloud sync
 
+### Bitrig preview crash investigation (2026-10-16)
+
+`make bitrig-preview` completed successfully with the iOS 27 simulator SDK.
+The build log `2026-10-16T10-31-14-00e72c87.log` contains one nonfatal
+`cmark-gfm` module-map warning and no build errors. Launch verification remains
+blocked: the simulator stayed on its home screen and returned no app run log.
+
+Bitrig 0.29.0 (2900), rather than FlowDown, crashed at 10:31:42 and again at
+10:33:40 (+0800). Both macOS diagnostic reports identify
+`/Applications/Bitrig.app/Contents/MacOS/Bitrig`, `EXC_CRASH` / `SIGABRT`, and
+`swift_task_reportUnexpectedExecutor`. The next two frames have Bitrig image
+offsets 21535632 and 21634248, matching the earlier October 15 reports.
+These reports establish a host concurrency failure; they do not establish
+which Bitrig operation causes it. A Bitrig fix is needed before preview launch
+can be verified reliably. Repeated preview attempts are not a useful workaround.
+
+The tracked ChatClientKit SwiftPM workspace and schemes deleted during the
+earlier investigation were restored. No package source or dependency pin was
+changed. The successful preview build above preceded that restoration.
+
 1. Install a Debug build on the iPhone and the iPad with **Run on…**, using the same Apple ID in Settings → iCloud on both devices.
 2. In FlowDown, open Settings → Data Control and turn on **Enable iCloud Sync**.
 3. Create a conversation on one device, leave the app in the foreground on the other, and confirm the conversation appears.
