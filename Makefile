@@ -203,7 +203,7 @@ bitrig-info:
 	bitrig run -list -json
 
 bitrig-preview:
-	bitrig preview -platform iOS -platform macOS -scheme FlowDown -configuration Debug
+	bitrig preview -platform iOS -scheme FlowDown -configuration Debug
 
 bitrig-build-ios:
 	bitrig build -destination 'generic/platform=iOS' -scheme FlowDown -configuration Debug

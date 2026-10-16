@@ -612,7 +612,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.flow.FlowDownTranslationProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).FlowDownTranslationProvider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -644,7 +644,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.flow.FlowDownTranslationProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).FlowDownTranslationProvider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -971,7 +971,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.flow.FlowDownWidgets;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).FlowDownWidgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -1004,7 +1004,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.flow.FlowDownWidgets;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).FlowDownWidgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -1028,7 +1028,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.FlowDownUnitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).FlowDownUnitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1055,7 +1055,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.FlowDownUnitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).FlowDownUnitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

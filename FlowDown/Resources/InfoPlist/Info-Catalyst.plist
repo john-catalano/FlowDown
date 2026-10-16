@@ -112,6 +112,8 @@
 			</array>
 		</dict>
 	</array>
+	<key>APP_GROUP_IDENTIFIER</key>
+	<string>$(APP_GROUP_IDENTIFIER)</string>
 	<key>CLOUDKIT_SYNC_CONTAINER_IDENTIFIER</key>
 	<string>$(CLOUDKIT_SYNC_CONTAINER_IDENTIFIER)</string>
 	<key>NSAppTransportSecurity</key>

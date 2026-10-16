@@ -8,7 +8,16 @@
 import Foundation
 
 enum AppGroup {
-    private static let identifier = "group.wiki.qaq"
+    /// Substituted from APP_GROUP_IDENTIFIER in the target Info.plist.
+    private static let identifier: String = {
+        guard let value = Bundle.main.object(forInfoDictionaryKey: "APP_GROUP_IDENTIFIER") as? String,
+              !value.isEmpty,
+              !value.contains("$(")
+        else {
+            preconditionFailure("APP_GROUP_IDENTIFIER must be set in the target Info.plist")
+        }
+        return value
+    }()
 
     private static var containerURL: URL? {
         FileManager.default.containerURL(

@@ -1,0 +1,11 @@
+// Personal fork of FlowDown. Development.xcconfig and Release.xcconfig include
+// this file after Base.xcconfig, so these values replace the upstream team
+// and bundle identifier. The CloudKit container is iCloud.$(PRODUCT_BUNDLE_IDENTIFIER).sync
+// and therefore follows the bundle identifier below.
+//
+// Team and bundle prefix match the Apple Development identity already
+// signed in to Xcode: JOHN JOSEPH CATALANO (HZKNJGXMBK), app.bitrig.johncatalano.*
+
+DEVELOPMENT_TEAM = HZKNJGXMBK
+PRODUCT_BUNDLE_IDENTIFIER = app.bitrig.johncatalano.flowdown
+APP_GROUP_IDENTIFIER = group.$(PRODUCT_BUNDLE_IDENTIFIER)
